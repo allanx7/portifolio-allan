@@ -24,8 +24,8 @@ revealElements.forEach((element, index) => {
 const roleText = document.querySelector(".hero-role");
 const roles = [
     "Desenvolvedor Full Stack",
-    "Dev Júnior em evolução",
-    "Estagiário focado em resultados",
+    "Dev J\u00fanior em evolu\u00e7\u00e3o",
+    "Estagi\u00e1rio focado em resultados",
 ];
 
 let roleIndex = 0;
@@ -43,7 +43,7 @@ setInterval(() => {
 
 const cardElements = document.querySelectorAll(".project-card, .skill-card, .certificate-card, .contact-card");
 
-// Inclinação leve dos cards seguindo o cursor.
+// Inclinacao leve dos cards seguindo o cursor.
 cardElements.forEach((card) => {
     card.addEventListener("mousemove", (event) => {
         const rect = card.getBoundingClientRect();
