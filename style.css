@@ -36,7 +36,7 @@ body {
 
 body::before {
     content: "";
-    position: fixed;
+   position: fixed;
     inset: 0;
     background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
@@ -59,7 +59,7 @@ body::before {
     border-radius: 999px;
     filter: blur(60px);
     opacity: 0.35;
-    z-index: -2;
+    z-index: -1;
     pointer-events: none;
 }
 
@@ -91,7 +91,7 @@ body::before {
 }
 
 .topbar {
-    position: sticky;
+    position:sticky;
     top: 0;
     z-index: 50;
     backdrop-filter: blur(8px);
@@ -114,6 +114,7 @@ body::before {
     font-size: 1.45rem;
     text-decoration: none;
     letter-spacing: 0.6px;
+    padding: 40px 0;
 }
 
 .logo span {
@@ -146,7 +147,7 @@ body::before {
     border-radius: 999px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 13px;
     font-weight: 700;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -641,6 +642,10 @@ h1 {
     transform: translateY(0) scale(1);
 }
 
+
+
+
+/* adaptativo em telas mormais como iphone 11 ate o 17 pro e pro max.*/
 @keyframes floatOne {
     0%,
     100% {
@@ -681,9 +686,12 @@ h1 {
     }
 }
 
+
+
 @media (max-width: 680px) {
     .topbar {
-        position: static;
+        position: sticky;
+        top: 0px;
     }
 
     .nav-wrap {
@@ -714,5 +722,34 @@ h1 {
     .certificate-actions {
         justify-content: flex-start;
         flex-wrap: wrap;
+    }
+
+    
+    .github-btn {
+        position: relative;
+        top: 23px;
+    }
+    
+    a.logo {
+        position: relative;
+        top: 23px;
+    }
+}
+   
+
+/* Ajustes para telas muito pequenas como iphone se */
+@media (max-width: 320px) {
+    a.logo {
+        position: relative;
+        top: 0px;
+    }
+    .github-btn {
+        position: relative;
+        top: 0px;
+    }
+    .nav-wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0px 0;
     }
 }
