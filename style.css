@@ -735,7 +735,33 @@ h1 {
         top: 23px;
     }
 }
-   
+
+
+/* ajustes de android de quase todas versoes */
+@media (max-width: 800px) {
+    header.topbar {
+        position: sticky;
+        top: 0px;
+        
+    }
+
+    .nav-wrap {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0px 0;
+    }
+
+     .github-btn {
+        position: relative;
+        top: 23px;
+    }
+    
+    a.logo {
+        position: relative;
+        top: 23px;
+    }
+}
+
 
 /* Ajustes para telas muito pequenas como iphone se */
 @media (max-width: 320px) {
